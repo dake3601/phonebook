@@ -52,7 +52,7 @@ let persons = [
 ]
 
 app.get('/', (request, response) => {
-  response.send('<h1>Phonebook Backend</h1>')
+  response.send('<h1>Phonebook</h1>')
 })
 
 app.get('/info', (request, response) => {
