@@ -1,1 +1,1 @@
-GET http://localhost:3001/api/persons
+GET https://serene-castle-71384.herokuapp.com/api/persons/
