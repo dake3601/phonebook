@@ -30,8 +30,10 @@ app.get('/', (request, response) => {
 })
 
 app.get('/info', (request, response) => {
-  response.send(`<p>Phonebook has info for ${persons.length} people</p>
-                  <p>${new Date()}</p>`)
+  Person.find({}).then(persons => {
+    response.send(`<p>Phonebook has info for ${persons.length} people</p>
+                   <p>${new Date()}</p>`)
+  })
 })
 
 app.get('/api/persons', (request, response) => {
