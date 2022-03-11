@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 morgan.token('post', (request, response) => {
-  if(request.method === 'POST') {
+  if(['POST', 'PUT'].includes(request.method)) {
     const body = request.body
 
     const person = {
